@@ -1,0 +1,27 @@
+/* CSS Document */
+body {
+    background-color: rgb(108, 108, 226);
+    text-align: center;
+}
+.form {
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	color: black;
+}
+#add {
+    background-color: cyan;
+}
+#subtract {
+    background-color: magenta;
+}
+#multiply {
+    background-color: yellow;
+}
+#divide {
+    background-color: teal;
+}
+#divide-fixed {
+    background-color: yellowgreen;
+}
+#modulo {
+    background-color: tomato;
+}
