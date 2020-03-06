@@ -1,0 +1,200 @@
+Open <div class which represents children and named it form. Left arrow, fieildset, right arrow to make the fields code to work, The fieldset element represents a set of form controls optionally grouped under a common name. Open label code, type in number 1: and close label code. What label is doing a captioning in a user interface. Open <input type="text" id="num1"> which is a data field and close fieldset code. Open a new fieldset code with arrows on both ends, then open up <label> code, type number 2 and close </label>. Open <input type="text" id="num2"> and close </fieldset>. Open up a third <fieldset> code, open <button id="add" onlick="Addnums()">click to add</button> which represents button labeled by its contents. Open up <h3> code, type result and close </h3> and it represents a section heading. Open <span id="result"> result here and close </span>  and its useful when used together with global attributes. Close </fieldset> code and </div>.
+
+2 names
+
+Life
+Anime
+Success
+
+
+3 let, const and var:
+
+Var
+
+var x= "hello moto";
+Undefined 
+
+function sayhello(){
+    var hello = "hello moto";
+    return hello;
+}
+undefined
+
+function sayhello(){
+    var hello = "hello moto";
+    return hello;
+}
+ console.log(hello)   
+VM524:5 Uncaught ReferenceError: hello is not defined
+    at <anonymous>:5:14
+
+var hello = "hello moto";
+    function sayhello(){
+    return hello;
+}
+ console.log(hello)   
+VM717:5 hello moto
+
+Let
+
+let x = "hello google";
+undefined
+var name = "URL";
+if(name === "URL"){
+    let hello = "hello URL";
+} else {
+    let hello = "hi";
+}
+console.log(hello)
+VM1646:7 Uncaught ReferenceError: hello is not defined
+    at <anonymous>:7:13
+(anonymous) @ VM1646:7
+var name = "URL";
+if(name === "URL"){
+    let hello = "hello URL";
+    console.log(hello);
+} else {
+    let hello = "hi";
+    console.log(hello);
+}
+VM1990:4 hello URL
+
+Const 
+
+const y = "hello bello";
+undefined
+function sayHello(){
+  hello = "Hello bello";
+  return hello;
+}
+sayHello();
+console.log(hello);
+VM2053:6 Hello bello
+
+4. Global scope vs local scope:
+
+Var global
+
+var a = 10;
+undefined
+var a = 10;
+
+function one() {
+alert(a);
+}
+undefined
+
+Var local
+
+var b = 2;
+
+undefined
+function two(a) {
+alert(a);
+]
+VM2805:3 Uncaught SyntaxError: Unexpected token ']'
+function three() {
+var b = 2;
+alert(a);
+}
+undefined
+
+Let local
+
+let x = 50;
+undefined
+if(x === 50) {
+let x = 20;
+console.log(x);
+}
+console.log(x);
+VM3183:3 20
+VM3183:5 50
+undefined
+
+Let global
+
+Can't find an example, only seeing var
+
+Const local
+
+var z = 11;
+{
+const y = 3;
+}
+undefined
+
+Const global
+
+const x = 5;
+
+(function () {
+    const x;
+    console.log(x);
+    x = 10;
+    console.log(x); 
+})();
+Uncaught SyntaxError: Missing initializer in const declaration
+
+Week 3
+
+2) add form, I've created a code where by using addeventlistener() I can now click or have it continuously execute without having on click in the code because it does the same job but easier. The code allows me to add and have a result after.
+
+3) referenced function you reference the name of the function and omit the () parentheses which you use when calling/invoking a function. Invoked function is The code inside a function is not executed when the function is defined. The code inside a function is executed when the function is invoked.
+
+4) A named function is a function declaration if it appears as a statement. Function expressions is when an function is created as part of an expression.
+Function expression
+const getRectArea = function(width, height) {
+  return width * height;
+}
+
+console.log(getRectArea(2,6));
+// expected output: 12
+
+Named function
+
+function car () {
+  return brand() + " bmw m4";
+  
+  function brand () { return "I series"; }
+}
+
+car()
+
+5) A named function is a function declaration if it appears as a statement. Arrow function are a more concise syntax for writing function expressions. An anonymous function is a function that is not stored in a program file, but is associated with a variable whose data type is function_handle.
+
+Named function
+
+function car () {
+  return brand() + " bmw m4";
+  
+  function brand () { return "I series"; }
+}
+
+car()
+
+Anon function
+
+function John() {
+		...
+	}
+	John ();
+
+	
+	var John  = function(){
+		...
+	};
+	John();
+
+Arrow function
+
+hello = () => {
+  return "Hello World!";
+}
+
+7) The reload() method is used to reload the current document. The reload() method does the same as the reload button in your browser. By default, the reload() method reloads the page from the cache, but you can force it to reload the page from the server by setting the forceGet parameter to true.
+
+8) git init initializes a local git repository on your computer. You do this after you have created the directory (aka folder) that you want to push to remote (Github). Git status When you have added some files and filled them with some content, type the git status command in Terminal, and hit return. Git add When you are ready to commit your changes locally, type git add. Git commit So you have staged your file(s), and they are ready to be committed locally. There are 2 ways to do this. You can do:git commit -m "my first commit". Git remote add So you have committed your new local repository on your computer. Now you are ready to push it to remote origin. remote origin refers to the remote hosting service you are using to host your repositories remotely. Create a remote repository on GitHub, To create a remote repository on Github, go to your Github profile, click on the Repositories tab, and then the green New button that appears to the right of the "Find a repository" search bar. This will take you to https://github.com/new, where you will create your new repository.To create a remote repository on Github, go to your Github profile, click on the Repositories tab, and then the green New button that appears to the right of the "Find a repository" search bar. This will take you to https://github.com/new, where you will create your new repository. Repository name, The first step to creating a remote repository on Github is to fill out the repository name field with a repo name of your choosing. When I created the remote repository for housing the local repository of this slide deck, I input the following in the repository name field:. Create repository, click on green create repository button. git remote add origin remoteurl ssh, git remote add origin git@github.com:interglobalmedia/test-repo.git, git remote add origin remoteurl revisited: HTTPS, git remote add origin https://github.com/interglobalmedia/test-repo.git. git push -u, Now that your local repository has been associated with the remote repository, you are ready to push the local repository to remote origin, git push -u origin master. git push -u origin master, git push basically results in the upload of your local repository on Github. You are pushing it to your remote origin, which is Github, and to the remote master branch from your local master branch.
+
+9)
+
