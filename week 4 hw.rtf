@@ -1,0 +1,135 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;\f2\fswiss\fcharset0 Arial-BoldMT;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c13333\c13333\c13333;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Week 4 \
+\
+1)  loops are great when you want to do the same task/run the same cade over and over again, and each time with a different value.\
+\
+2) 
+\f1\fs32 \cf2 \expnd0\expndtw0\kerning0
+The initialization 
+\f2\b statement
+\f1\b0  describes the starting point of the 
+\f2\b loop
+\f1\b0 , where the 
+\f2\b loop
+\f1\b0  variable is initialized with a starting value. A 
+\f2\b loop
+\f1\b0  variable or counter is simply a variable that controls the flow of the 
+\f2\b loop
+\f1\b0 .\
+\
+4)  for (let I = 0; I < 100; I++) \{\
+	console.log(` number is : $\{I\} `);\
+\}\
+\
+0 is less than 100 so its going to take it as 0 out of 10 instead of a 100\
+\
+5) while loop and I++\
+\
+6) final expression\
+\
+7)  let I = o\
+\
+	if (I < 4) \{ alert(i); I++\}\
+	(I < 4) \{ alert(i); I++\}\
+	(I < 4) \{ alert(i); I++\}\
+	I == 4\
+\
+8) function diffArray(arr1, arr2) \{\
+   var newArr = []; \
+\
+   var ordArr = arr1.concat(arr2).sort();  //[1,1,4,4,8,8,10,12,12]\
+\
+   for ( var i = 0;  i < ordArr.length ; i++ ) \{\
+       if (ordArr[i]  !==  ordArr[i+1] )\{\
+\
+       newArr.push(ordArr[i]);\
+       \}\
+   \}\
+   console.log(newArr);\
+\}\
+diffArray([1, 4, 8, 12], [1, 4, 8, 10, 12]);\
+\
+9) 
+\f3\fs24 \cf3 \outl0\strokewidth0 \strokec3 let slideIndex = 1;\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf3 showSlideDivs(slideIndex);\
+\
+function addSlideDivs(n) \{\
+  showSlideDivs((slideIndex += n));\
+\}\
+\
+function showSlideDivs(n) \{\
+  let i;\
+  let slides = document.getElementsByClassName("slide");\
+  if (n > slides.length) \{\
+    slideIndex = 4;\
+  \}\
+  if (n < 4) \{\
+    slideIndex = slides.length;\
+  \}\
+  for (i = 0; i < slides.length; i++) \{\
+    slides[i].style.display = "none";\
+  \}\
+  slides[slideIndex - 3].style.display = "block";\
+\}\
+\
+const buttonLeft = document.getElementById("left");\
+const buttonRight = document.getElementById("right");\
+\
+buttonLeft.addEventListener("click", () => \{\
+  addSlideDivs(-2);\
+\});\
+\
+buttonRight.addEventListener("click", () => \{\
+  addSlideDivs(3);\
+\});\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \outl0\strokewidth0 \
+10) \
+\
+11)\
+\
+12)\
+\
+13)\
+\
+14)\cf2 The for/in statement 
+\f2\b loops
+\f1\b0  through the properties of an object. The block of code inside the 
+\f2\b loop
+\f1\b0  will be executed once for each property. ... do/while - 
+\f2\b loops
+\f1\b0  through a block of code once, and then repeats the 
+\f2\b loop
+\f1\b0  while a specified condition is true. 
+\f3\fs26 \cf0 For of
+\f0\fs32  is a new loop in ES6 that replaces both 
+\f3\fs26 for-in
+\f0\fs32  and 
+\f3\fs26 forEach()
+\f0\fs32  and supports the new iteration protocol.
+\f1 \cf2 \
+\
+15)\
+\
+16) \cf2 Contrast with the while 
+\f2\b loop
+\f1\b0 , which tests the condition before the code within the block is executed, the 
+\f2\b do
+\f1\b0 -while 
+\f2\b loop
+\f1\b0  is an 
+\f2\b exit
+\f1\b0 -condition 
+\f2\b loop
+\f1\b0 . This means that the code must always be executed first and then the expression or test condition is evaluated. If it is true, the code executes the body of the 
+\f2\b loop
+\f1\b0  agai}
