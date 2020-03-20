@@ -1,121 +1,69 @@
 <!DOCTYPE <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>week 1 hw</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>week 5 hw</title>
         <link href="style.css" rel="stylesheet"
-                type="text/css">
+        type="text/css">
 </head>
-<body>
 
-    <div class="change-wrapper">
-        <div class="change-color">
-
-        </div>
-        <div class="btn-wrapper">
-            <button class="btn-change">change the background!</button>
-            <button class="btn-clear">clear the background!</button>
-        </div>
-
-    <div class="form">
-        <fieldset>
-            <label>number 1:</label>
-            <input type="text" id="num1">
-        </fieldset>
-        <fieldset>
-            <label>number 2:</label>
-            <input type="text" id="num2">
-        </fieldset>
-        <fieldset>
-            <button id="add">Click to add</button>
-        <h3>Result</h3>
-        <span id="result">Result here</span>
-            </fieldset>
-    </div>
-            <div class="form">
-                <fieldset>
-                    <label>number 3:</label>
-                    <input type="text" id="num3">
-                </fieldset>
-                <fieldset>
-                    <label>number 4:</label>
-                    <input type="text" id="num4">
-                </fieldset>
-                <fieldset>
-                    <button id="multiply">Click to multiply</button>
-                    <h3>Result</h3>
-                    <span id="result2">Result here</span>
-                </fieldset>
-     </div>
-             <div class="form">
-                 <fieldset>
-                     <label>number 5:</label>
-                     <input type="text" id="num5">
-                 </fieldset>
-                 <fieldset>
-                     <label>number 6:</label>
-                     <input type="text" id="num6">
-                 </fieldset>
-                 <fieldset>
-                     <button id="divide">Click to Divide</button>
-                     <h3>Result</h3>
-                     <span id="result3">Result here</span>
-                 </fieldset>
-        </div>  
-                <div class="form">
-                    <fieldset>
-                        <label>number 7:</label>
-                        <input type="text" id="num7">
-                    </fieldset>
-                    <fieldset>
-                        <label>number 8:</label>
-                        <input type="text" id="num8">
-                    </fieldset>
-                    <fieldset>
-                        <button id="divide-fixed">Click to Divide-fixed</button>
-                        <h3>Result</h3>
-                        <span id="result4">Result here</span>
-                    </fieldset>
-        </div> 
-                <div class="form">
-                    <fieldset>
-                        <label>number 9:</label>
-                        <input type="text" id="num9">
-                    </fieldset>
-                    <fieldset>
-                        <label>number 10:</label>
-                        <input type="text" id="num10">
-                    </fieldset>
-                    <fieldset>
-                        <button id="subtract">Click to Subtract</button>
-                        <h3>Result</h3>
-                        <span id="result5">Result here</span>
-                    </fieldset>
-        </div>
-                    <div class="form">
-                        <fieldset>
-                            <label>number 11:</label>
-                            <input type="text" id="firstnum">
-                        </fieldset>
-                        <fieldset>
-                            <label>number 12:</label>
-                            <input type="text" id="secondnum">
-                        </fieldset>
-                        <fieldset>
-                            <button id="modulo">Show Remaining</button>
-                            <h3>Results</h3>
-                            <p id="remainder"> Remainder here</p>
-                        </fieldset>
-            </div>
+<body class="site">
+<div class="site-content">
+<div class="wrapper">
+    <h1 id="heading">Teppen Registration Form</h1>
+    <form action="submit.html" id="userForm">
+        <input type="text" name="username" placeholder="username" pattern="^(?=.*\d)(?=.*[a-zA-Z]).{7,15}$"
+            title="You have not inputted a valid username.It must contain at least one number and be at least 8 characters long."
+            required>
+        <input type="email" name="mail" placeholder="email"
+            pattern="(\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b)" title="Your email must contain a @ and a valid .ext"
+            required>
+            <!-- regex checks for at least one number, one lowercase and one uppercase letter and at least six characters that are letters, numbers or the underscore -->
+        <input type="password" name="password" id="password" placeholder="password"
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{13,24}$"
+            title="Your password must contain at least one number, one lowercase and one uppercase letter and must be least 13
+        characters long, but no more than 24 characters long, containing letter, numbers or the underscore."
+            required>
+        <button type="submit" form="userForm" id="btn">Submit</button>
+        <button id="btnReset">Reset</button>
 
 
-    
-    <script src="main.js">
-        
 
-        
-        </script>
+    </form>
+</div>
+
+
+
+
+</div>
+<footer class="site-footer">
+    <p>&#10013; © 2019 Zachary Agard &#10013;</p>
+</footer>
+<script src="main.js"></script>
+
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
 </html>

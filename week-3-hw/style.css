@@ -1,27 +1,141 @@
 /* CSS Document */
+
 body {
-    background-color: rgb(108, 108, 226);
+    font-family: Helvetica;
+    background: #000000;
+    background-image: url(Donbanner.jpg);
+}
+
+.wrapper {
+    display: block;
+    margin: 40px auto;
     text-align: center;
 }
-.form {
-	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
-	color: black;
+
+h1 {
+    text-align: center;
+    color: gold;
 }
-#add {
-    background-color: cyan;
+
+form {
+    margin: 40px auto;
+    background: #ff1100;
+    width: 75%;
+    padding: 20px;
 }
-#subtract {
-    background-color: magenta;
+
+input {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    height: 20px;
+    color: #1327da;
+    -webkit-appearance: none;
+    font-size: 0.9rem;
 }
-#multiply {
-    background-color: yellow;
+
+input[name="username"]:::-webkit-input-placeholder {
+     /* Chrome/Opera/Safari */
+     color: #1327da;
 }
-#divide {
-    background-color: teal;
+
+input[name="username"]::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #1327da;
 }
-#divide-fixed {
-    background-color: yellowgreen;
+
+input[name="username"]:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #1327da;
 }
-#modulo {
-    background-color: tomato;
-}
+
+input[name="username"]:-moz-placeholder {
+    /* Firefox 18- */
+    color: #1327da; }
+  
+  input[name="mail"]::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #1327da; }
+  
+  input[name="mail"]::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #1327da; }
+  
+  input[name="mail"]:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #1327da; }
+  
+  input[name="mail"]:-moz-placeholder {
+    /* Firefox 18- */
+    color: #1327da; }
+  
+  input[name="password"]::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #1327da; }
+  
+  input[name="password"]::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #1327da; }
+  
+  input[name="password"]:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #1327da; }
+  
+  input[name="password"]:-moz-placeholder {
+    /* Firefox 18- */
+    color: #1327da; }
+  
+  input:invalid {
+      color:#c60000;
+  }
+
+  .center {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  button,
+  #btn {
+      margin: 20px auto;
+      color: #1327da;
+      background: #709dff;
+      letter-spacing: 0.1em;
+      border: 2px dotted #1327da;
+      font-size: 1rem;
+      border-radius: 3px;
+      box-shadow: 0 2px 2px #333;
+  }
+
+  .site-footer p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #1327da;
+  }
+
+  :root {
+      --space: 1.4em 0;
+      --space: 2em 0;
+  }
+
+  .Site {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+  }
+
+  .Site-content {
+      flex: 1 0 auto;
+      padding: var(--space) var(--space) 0;
+      width: 100%;
+  }
+
+  .Site-content:after {
+      content: "\00a0";
+      display: block;
+      margin-top: var(--space);
+      height: 0;
+      visibility: hidden;
+  }

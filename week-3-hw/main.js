@@ -1,84 +1,42 @@
-const addNums = () => {
-    let num1 = document.getElementById("num1").value;
-    let num2 = document.getElementById("num2").value;
-    let sum = parseInt(num1, 10) + parseInt(num2, 10);
-    document.getElementById("result").innerHTML = sum;
-};
+const email = document.querySelector('[name="mail"]');
+const password = document.querySelector('[name="password"]');
+const username = document.querySelector('[name="username"]');
+const form = document.querySelector("form");
+const button = document.querySelector("#btn");
 
-const btnAdd = document.getElementById("add");
-btnAdd.addEventListener("click", addNums);
+const heading1 = document.getElementById("heading");
 
-const multiplyNums = () => {
-    let num3 = document.getElementById("num3").value;
-    let num4 = document.getElementById("num4").value;
-    let multiply = num3 * num4;
-    document.getElementById("result2").innerHTML = multiply;
-};
-
-const btnMultiply = document.getElementById("multiply");
-btnAdd.addEventListener("click", multiplyNums);
-
-const dividenums= () => {
-    const num5 = document.getElementById("num5").value;
-    const num6 = document.getElementById("num6").value;
-    const divide = num5 / num6;
-    document.getElementById("result3").innerHTML = divide;
-};
-
-const btnDivide = document.getElementById("divide");
-btnAdd.addEventListener("click", dividenums);
-
-const dividenumsfixed = () => {
-        const num7 = document.getElementById("num7").value;
-        const num8 = document.getElementById("num8").value;
-        const divide = num7 / num8;
-        const dividefixed = divide.toFixed(2);
-        document.getElementById("result4").innerHTML = dividefixed
-};
-
-const btnDividefixed = document.getElementById("divide-fixed");
-btnAdd.addEventListener("click", dividenumsfixed);
-
-const subtractnums = () => {
-    const num9 = document.getElementById("num9").value;
-    const num10 = document.getElementById("num10").value;
-    const subtract = num9 - num10;
-    document.getElementById("result5").innerHTML = subtract;
-};
-
-const btnSubtract = document.getElementById("subtract");
-btnAdd.addEventListener("click", subtractnums);
-
-const leftover = () => {
-    const firstnum = document.getElementById("firstnum").value;
-    const secondnum = document.getElementById("secondnum").value;
-    const remainder = firstnum % secondnum;
-    document.getElementById("remainder").innerHTML = remainder;
-};
-
-const btnModulo = document.getElementById("modulo");
-btnAdd.addEventListener("click", leftover);
-
-
-function changeBg() {
-    const changeColor = document.querySelector(".change-color");
-    changeColor.style.height = "100%";
-    changeColor.style.width = "100%";
-    if (changeColor.style.backgroundColor === "purple") {
-      changeColor.style.backgroundColor = "green";
-    } else {
-      changeColor.style.backgroundColor = "purple";
-    }
+form.addEventListener("input", () => {
+  username.validity.patternMismatch
+    ? username.setCustomValidity(
+        `You have not inputted a valid username. It must contain at least one number and be at least 8 characters long.`
+      )
+    : username.setCustomValidity(``);
+  email.validity.patternMismatch
+    ? email.setCustomValidity(`Your email must contain a @ and a valid .ext`)
+    : email.setCustomValidity(``);
+  password.validity.patternMismatch
+    ? password.setCustomValidity(
+        `Your password must contain at least one number, one lowercase and one uppercase letter and must be least 13 characters long, but no more than 24 characters long, containing letters, numbers or the underscore.`
+      )
+    : password.setCustomValidity(``);
+  if (
+    email.validity.patternMismatch === false &&
+    password.validity.patternMismatch === false &&
+    username.validity.patternMismatch === false
+  ) {
+    heading1.innerHTML = `Your input is valid!`;
+    heading1.style.color = `#228b22`;
+  } else {
+    heading1.innerHTML = `Your input is invalid. Try again!`;
+    heading1.style.color = `#c51b05`;
   }
-  
-  function clearBg() {
-    window.location.reload();
-  }
-  
-  const btnChange = document.querySelector(".btn-change");
-  
-  btnChange.addEventListener("click", changeBg);
-  
-  const btnClear = document.querySelector(".btn-clear");
-  
-  btnClear.addEventListener("click", clearBg);
+});
+
+function clearForm() {
+  window.location.reload();
+}
+
+const btnReset = document.getElementById("btnReset");
+
+btnReset.addEventListener("click", clearForm);
